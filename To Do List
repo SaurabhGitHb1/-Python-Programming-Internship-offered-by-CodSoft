@@ -94,3 +94,43 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+Output
+
+--- To-Do List Menu ---
+1. View Tasks
+2. Add Task
+3. Mark Task as Completed
+4. Delete Task
+5. Edit Task
+6. Save & Exit
+Choose an option: 2
+Enter a new task: Take Attendence
+Task added.
+
+--- To-Do List Menu ---
+1. View Tasks
+2. Add Task
+3. Mark Task as Completed
+4. Delete Task
+5. Edit Task
+6. Save & Exit
+Choose an option: 3
+
+Your To-Do List:
+1. [✗] Take Attendence
+Enter task number to mark as completed: 1
+Task marked as completed.
+
+--- To-Do List Menu ---
+1. View Tasks
+2. Add Task
+3. Mark Task as Completed
+4. Delete Task
+5. Edit Task
+6. Save & Exit
+Choose an option: 6
+Tasks saved. Goodbye!
