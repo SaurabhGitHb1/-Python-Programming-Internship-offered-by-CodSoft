@@ -1,0 +1,96 @@
+import json
+import os
+
+TASKS_FILE = "tasks.json"
+
+# Load tasks from file
+def load_tasks():
+    if os.path.exists(TASKS_FILE):
+        with open(TASKS_FILE, "r") as file:
+            return json.load(file)
+    return []
+
+# Save tasks to file
+def save_tasks(tasks):
+    with open(TASKS_FILE, "w") as file:
+        json.dump(tasks, file, indent=4)
+
+# Display all tasks
+def view_tasks(tasks):
+    if not tasks:
+        print("No tasks found.")
+        return
+    print("\nYour To-Do List:")
+    for i, task in enumerate(tasks, 1):
+        status = "✓" if task['done'] else "✗"
+        print(f"{i}. [{status}] {task['task']}")
+
+# Add a task
+def add_task(tasks):
+    new_task = input("Enter a new task: ")
+    tasks.append({"task": new_task, "done": False})
+    print("Task added.")
+
+# Mark a task as completed
+def mark_completed(tasks):
+    view_tasks(tasks)
+    try:
+        index = int(input("Enter task number to mark as completed: ")) - 1
+        tasks[index]["done"] = True
+        print("Task marked as completed.")
+    except (IndexError, ValueError):
+        print("Invalid task number.")
+
+# Delete a task
+def delete_task(tasks):
+    view_tasks(tasks)
+    try:
+        index = int(input("Enter task number to delete: ")) - 1
+        removed = tasks.pop(index)
+        print(f"Task '{removed['task']}' deleted.")
+    except (IndexError, ValueError):
+        print("Invalid task number.")
+
+# Edit a task
+def edit_task(tasks):
+    view_tasks(tasks)
+    try:
+        index = int(input("Enter task number to edit: ")) - 1
+        new_text = input("Enter new task description: ")
+        tasks[index]["task"] = new_text
+        print("Task updated.")
+    except (IndexError, ValueError):
+        print("Invalid task number.")
+
+# Main loop
+def main():
+    tasks = load_tasks()
+    while True:
+        print("\n--- To-Do List Menu ---")
+        print("1. View Tasks")
+        print("2. Add Task")
+        print("3. Mark Task as Completed")
+        print("4. Delete Task")
+        print("5. Edit Task")
+        print("6. Save & Exit")
+        choice = input("Choose an option: ")
+
+        if choice == '1':
+            view_tasks(tasks)
+        elif choice == '2':
+            add_task(tasks)
+        elif choice == '3':
+            mark_completed(tasks)
+        elif choice == '4':
+            delete_task(tasks)
+        elif choice == '5':
+            edit_task(tasks)
+        elif choice == '6':
+            save_tasks(tasks)
+            print("Tasks saved. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Try again.")
+
+if __name__ == "__main__":
+    main()
