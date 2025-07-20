@@ -1,4 +1,3 @@
-
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
 
@@ -24,3 +23,18 @@ elif operation == "/":
     print("Result:", result)
 else:
     print("Invalid operation")
+
+
+
+
+
+Output
+Enter first number: 58
+Enter second number: 44
+Choose operation:
++ for Addition
+- for Subtraction
+* for Multiplication
+/ for Division
+Enter operation: *
+Result: 2552.0
