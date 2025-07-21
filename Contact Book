@@ -77,3 +77,81 @@ while True:
         break
     else:
         print("Invalid choice. Try again.\n")
+
+Output
+
+Contact Book Menu
+1. Add Contact
+2. View Contacts
+3. Search Contact
+4. Update Contact
+5. Delete Contact
+6. Exit
+Enter choice (1-6): 1
+Enter name: Saurabh Tiwari
+Enter phone: 9335381712
+Enter email: saurabhtiwaribhumihar@gmail.com
+Enter address: Uttar Pradesh
+Contact added.
+
+Contact Book Menu
+1. Add Contact
+2. View Contacts
+3. Search Contact
+4. Update Contact
+5. Delete Contact
+6. Exit
+Enter choice (1-6): 2
+Name: Saurabh Tiwari
+Phone: 9335381712
+Email: saurabhtiwaribhumihar@gmail.com
+Address: Uttar Pradesh
+
+Contact Book Menu
+1. Add Contact
+2. View Contacts
+3. Search Contact
+4. Update Contact
+5. Delete Contact
+6. Exit
+Enter choice (1-6): 3
+Enter name or phone to search: 9335381712
+Name: Saurabh Tiwari
+Phone: 9335381712
+Email: saurabhtiwaribhumihar@gmail.com
+Address: Uttar Pradesh
+
+Contact Book Menu
+1. Add Contact
+2. View Contacts
+3. Search Contact
+4. Update Contact
+5. Delete Contact
+6. Exit
+Enter choice (1-6): 4
+Enter the name of the contact to update: Saurabh Tiwari
+New phone: 9335381712
+New email: 
+New address: 
+Contact updated.
+
+Contact Book Menu
+1. Add Contact
+2. View Contacts
+3. Search Contact
+4. Update Contact
+5. Delete Contact
+6. Exit
+Enter choice (1-6): 5
+Enter the name of the contact to delete: Saurabh Tiwari
+Contact deleted.
+
+Contact Book Menu
+1. Add Contact
+2. View Contacts
+3. Search Contact
+4. Update Contact
+5. Delete Contact
+6. Exit
+Enter choice (1-6): 6
+Bye!
